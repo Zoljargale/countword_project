@@ -1,0 +1,16 @@
+<h1>COUNT RESULT</h1>
+
+<h1>Таны оруулсан текст:</h1> {{ fulltext }}
+
+<h1>Таны оруулсан текст нийт {{count}} үгнээс бүрдсэн байна.</h1>
+
+<a href="{% url 'home' %}"><h1>ДАХИН ЭХЛҮҮЛЭХ</h1></a>
+
+<a href="https://ikon.mn/n/2435">Ikon.mn сайт руу шилжих</a>
+<h1>Үгийн давтамж</h1>
+
+{% for word, counttotal in  sortedwords %}
+{{ word }} - {{ counttotal }}
+<br />
+
+{% endfor %}
